@@ -38,5 +38,7 @@ Color colorData(){ // function needs to handle data input to variable/object.
 }
 
 void outputColorData(const Color& c) {
-
+    cout << "R value:/n" << c.red;
+    cout << "G value:/n" << c.green;
+    cout << "B value:/n" << c.blue << endl;
 }
