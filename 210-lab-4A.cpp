@@ -19,7 +19,12 @@ void outputColorData(const Color& c); // prototype.
 int main() {
     srand(time(0)); // Learned this today. Seed the random # generator.
     vector<Color> colors;
+    int n = rand() % 26 + 25;
 
+    for(int i = 0; i <= n - 1; i++) {
+        Color tempColor = colorData();
+        colors.push_back(tempColor);
+    }
     return 0;
 }
 
@@ -30,4 +35,8 @@ Color colorData(){ // function needs to handle data input to variable/object.
     colorTemp.green = rand() % 256;
 
     return colorTemp;
+}
+
+void outputColorData(const Color& c) {
+
 }
