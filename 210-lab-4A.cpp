@@ -12,7 +12,7 @@ struct Color {
     int red, blue, green;
 };
 
-Color inputColorData(); // prototype.
+Color colorData(); // prototype.
 void outputColorData(const Color& c); // prototype.
 
 int main() {
@@ -22,8 +22,6 @@ int main() {
     return 0;
 }
 
-Color inputColorData(){ // function needs to handle data input to variable/object.
+Color colorData(){ // function needs to handle data input to variable/object.
     Color colorTemp;
-
-
 }
