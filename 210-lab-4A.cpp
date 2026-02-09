@@ -1,6 +1,5 @@
 // COMSC 210 | Martha Stephanie Villalta | Lab 4A
 // Prog. creates a vector of structs [Color].
-// Red, Blue, and Green variables will rep. the hues.
 
 #include <cstdlib>
 #include <ctime>
@@ -21,10 +20,19 @@ int main() {
     vector<Color> colors;
     int n = rand() % 26 + 25;
 
-    for(int i = 0; i <= n - 1; i++) {
+    for(int i = 0; i <= n; i++) {
         Color tempColor = colorData();
         colors.push_back(tempColor);
     }
+
+    cout << " Color# | R value | G value | B value " << endl;
+    cout << " ------- --------   -------   -------" << endl;
+    for(int i = 0; i < colors.size(); i++) {
+        cout << "    " << i + 1 << "  |  ";
+        outputColorData(colors[i]);
+        cout << endl;
+    }
+
     return 0;
 }
 
@@ -38,7 +46,5 @@ Color colorData(){ // function needs to handle data input to variable/object.
 }
 
 void outputColorData(const Color& c) {
-    cout << "R value:/n" << c.red;
-    cout << "G value:/n" << c.green;
-    cout << "B value:/n" << c.blue << endl;
+    cout << c.red << "   " << c.green << "    " << c.blue << "    ";
 }
